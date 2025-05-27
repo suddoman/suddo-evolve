@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TP4 Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefefe;
+            text-align: left;
+            margin-top: 25px;
+			margin-left: 25px;
+        }
+        h1 {
+            color: #444;
+        }
+		
+		<!--collapse code?-->
+		.collapsible {
+		  background-color: #777;
+		  color: white;
+		  cursor: pointer;
+		  padding: 18px;
+		  width: 100%;
+		  border: none;
+		  text-align: left;
+		  outline: none;
+		  font-size: 15px;
+		}
+
+		.active, .collapsible:hover {
+		  background-color: #555;
+		}
+
+		.content {
+		  padding: 0 18px;
+		  display: none;
+		  overflow: hidden;
+		  background-color: #f1f1f1;
+		}
+		
+		.ex form {
+		  display: inline-block;
+		  margin-right: 20px;
+		}
+    </style>
+</head>
+<body>
+    <h1>TP4 Guide</h1>
+    <p>True Path is full of various points of "trap doors". Technologies and buildings that cause other problems to occure. </br>
+	In this guide I'm attempting to remind myself of when those are and how much to build up. </br>
+	<b>TODO: Make variable costs work </br>
+		Encrypted Data Optimization</b></p>
+    
+
+	<div class="ex">
+	<form>
+		<label for = "heat">Heat Level:</label>
+		<select name="heatValue" id="heatValue">
+			<option value="1">Rank0</option>
+			<option value=".9" selected>Rank1</option>
+		</select>
+	</form>
+	
+	<form>
+		<label for = "hollow">Hollow Bones Level:</label>
+		<select name="hollowValue" id="hollowValue">
+			<option value=".99">Rank0.01</option>
+			<option value=".98">Rank0.25</option>
+			<option value=".97" selected>Rank0.5</option>
+			<option value="1">Rank0</option>
+			<option value=".95">Rank1</option>
+			<option value=".92">Rank2</option>
+			<option value=".90">Rank3</option>
+		</select>
+	</form>
+	</div>
+	<p><b>Long Range Scanner</b> are the first Trap Door you'll experience. Once you research this the Syndicate (see the wiki) will begin to clog up your supply lines.</p>
+	<button type="button" class="collapsible">Open</button>
+	<div class="content">
+		<p>
+			Once researched you'll need to quickly set up various new planet infastructures. Here are a few noteworthy resources needed </br>
+			~Spaceport: </br>
+			$<span id="spaceportMoney" class="items heat" data-base-value="2500000">2.5 M</span> </br>
+			<span id="spaceportLumber" class="items heat" data-base-value="750000">750,000</span> Lumber </br>
+			<span id="spaceportCement" class="items heat" data-base-value="350000">350,000</span> Cement </br>
+			<b><span id="spaceportMythril" class="items heat hollow" data-base-value="10000">10,000</span> Mythril</b> </br>
+			~Electrolysis Plant </br>
+			$<span id="electrolysisMoney" class="items heat" data-base-value="1000000">1M</span> </br>
+			<span id="electrolysisCopper" class="items heat" data-base-value="185000">185k</span> Copper </br>
+			<span id="electrolysisSteel" class="items heat" data-base-value="220000">220k</span> Steel </br>
+			<span id="electrolysisPolymer" class="items heat" data-base-value="380000">380k</span> Polymer </br>
+			~Habitat </br>
+			$<span id="habitatMoney" class="items heat" data-base-value="1200000">1.2M</span> </br>
+			<span id="habitatFur" class="items heat" data-base-value="85000">85k</span> Fur</br>
+			<span id="habitatPlaywood" class="items hollow" data-base-value="100000">100k</span> Plywood</br>
+			~Mine </br>
+			$<span id="mineMoney" class="items heat" data-base-value="475000">475k</span></br>
+			<span id="mineLumber" class="items" data-base-value="568000">568k</span> Lumber </br>
+			<b><span id="mineWrought" class="items heat" data-base-value="250000">250k</span> Wrought Iron</b> </br>
+			~Water Freighter </br>
+			$<span id="waterMoney" class="items heat" data-base-value="450000">450k</span></br>
+			$<span id="waterIron" class="items heat" data-base-value="362000">362k</span></br>
+			<b><span id="waterNanotubes" class="items heat" data-base-value="125000">125k</span> Nanotubes</b> </br>
+			<b><span id="waterSheetmetal" class="items heat hollow" data-base-value="75000">75k</span> Sheet Metal</b> (You may need 2 on your first TP3) </br>
+			~Ship Yard </br>
+			<span id="shipAluminum" class="items heat" data-base-value="1000000">1000k</span> Aluminum </br>
+			<span id="shipTitanium" class="items heat" data-base-value="650000">650k</span> Titanium </br>
+			<b><span id="shipIridium" class="items heat" data-base-value="238000">250k</span> Iridium </b>(this is note worthy because you need to save enough for both the research and this)</br>
+			<b><span id="shipMythril" class="items heat hollow" data-base-value="414000">500k</span> Mythril</b> </br>
+			~Quantum (research) </br>
+			<span id="quantiumKnowledge" class="items" data-base-value="1000000">1.06M</span> Knowledge </br>
+			<span id="quantiumNanotubes" class="items" data-base-value="900000">900k Nanotubes </br>
+			10 Supercoliders completed </br>
+			Also note worthy is Iridium used in a lot of ships so make sure your production is high and you may want to stock pile (crate/container) a lot of it.
+		</p>
+	</div>
+	
+	<p><b>Strange Signal</b> is your second major trap door unlocking a new planet</p>
+	<button type="button" class="collapsible">Open</button>
+	<div class="content">
+		<p>
+			~Forward Operating Base </br>
+			$<span id="forwardMoney" class="items heat" data-base-value="250000000">250M</span></br>
+			<span id="forwardCopper" class="items heat" data-base-value="8000000">8M</span> Copper </br>
+			<span id="forwardUranium" class="items heat" data-base-value="50000">50k</span> Uranium </br>
+			<span id="forwardNanotubes" class="items heat" data-base-value="2500000">2.5M</span> Nanotubes </br>
+			<span id="forwardGraphene" class="items heat" data-base-value="3000000">3M</span> Graphene </br>
+			<b><span id="forwardSheetmetal" class="items heat hollow" data-base-value="7500000">7.5M</span> Sheet Metal</b></br>
+			<b><span id="forwardQuantium" class="items heat hollow" data-base-value="500000">500k</span> Quantium </b></br>
+			Also in general you should build A LOT of Hospitals before clicking this button.
+			
+			~BAC Tank (research)
+			<span id="bacKnowledge" class="items heat" data-base-value="1750000">1.75M</span> Knowledge </br>
+		</p>
+	</div>
+	
+	<p>Quick notes on how to optimize Encrypted data</p>
+	<button type="button" class="collapsible">Open</button>
+	<div class="content">
+		<p>
+			TODO
+		</p>
+	</div>
+	
+	<p><b>Encrypted Data Analysis (research)</b> is a BIG one that will increase Syndicate's activity and capped amounts across several Outer Systems</br>
+		Although counter intuitive I think stock piling a lot of Encrypted Data before jumping past this is the correct call (going past this increases your rate of Data collection)</p>
+	<button type="button" class="collapsible">Open</button>
+	<div class="content">
+		<p>
+			~Encrypted Data Anylsis:</br>
+			<b><span id="edaEDA" class="items heat" data-base-value="11200">12.5k</span> Encrypted Data</b></br>
+			~Advanced Medkits </br>
+			<span id="medkitKnowledge" class="items heat hollow" data-base-value="2280000">2.28M</span> Knowledge</br>
+			<b><span id="medkitEDA" class="items heat hollow" data-base-value="213700">213.7k</span> Encrypted Data</b></br>
+			~Mass Relay (research)</br>
+			<b><span id="relayEDA" class="items heat hollow" data-base-value="36000">36k</span> Encrypted Data</b></br>
+			~Mass Relay (construction)
+			<span id="relayNeutronium" class="items heat hollow" data-base-value="670000">670k</span> Neutronium </br>
+			<span id="relayAdamantite" class="items heat hollow" data-base-value="1620000">1,620k</span> Adamantite</br>
+			<span id="relayStanene" class="items heat hollow" data-base-value="9000000">9,000k</span> Stanene</br>
+			<b><span id="relayQuantium" class="items heat hollow" data-base-value="2130000">2,130k</span> Quantium</b></br>
+		</p>
+	</div>
+	
+	
+	
+	<p><b>Navigation Data (research)</b></br>
+		<b>Make sure to finish and charge the Mass Relay before continuing</b></p>
+	<button type="button" class="collapsible">Open</button>
+	<div class="content">
+		<p>
+			~Oricalcum Mine (you will need several of these, but when and how quickly you build them is up to you: See AI Super Core)</br>
+			$<span id="oriMoney" class="items heat hollow" data-base-value="2250000">2.25M</span></br>
+			<b><span id="oriMythril" class="items heat hollow" data-base-value="384700">384.7k</span> Mythril</b></br>
+			<b><span id="oriQuantium" class="items heat hollow" data-base-value="128200">128.2k</span> Quantium</b></br>
+			~Final Planet Mission (this is more a storage check)</br>
+			1.25M He-3 (I ain't mathin' reductions) </br>
+			1,250 Elerium</br>
+			You can't do the following until AFTER both the AI Supercore is built AND you send scouts to fully scan the system</br>
+			~Control Relay</br>
+			$<span id="controlMoney" class="items heat hollow" data-base-value="67500000">67.5M</span></br>
+			<span id="controlNeutronium" class="items heat hollow" data-base-value="90000">90k</span> Neutronium</br>
+			<span id="controlStanene" class="items heat hollow" data-base-value="405000">405k</span> Stanene</br>
+			<b><span id="controlQuantium" class="items heat hollow" data-base-value="256000">256k</span> Quantium</b></br>
+			~Tank</br>
+			<span id="tankOri" class="items heat hollow" data-base-value="540000">540k</span> Oricalcum</br>
+			<span id="tankMythril" class="items heat hollow" data-base-value="427500">427.5k</span> Mythril</br>
+			<span id="tankUranium" class="items heat hollow" data-base-value="22500">22.5k</span> Uranium</br>
+		</p>
+	</div>
+	
+	<p><b>AI Super Core:</b> This isn't a trap door but a major project that runs some what in parrelel with other things</p>
+	<button type="button" class="collapsible">Open</button>
+	<div class="content">
+		<p>
+			This is a 100 section project</br>
+			$<span id="aiMoney" class="items heat hollow" data-base-value="22500">22.5k</span>225M</br>
+			<span id="aiNanotubes" class="items heat hollow" data-base-value="11250000">11.25M</span> Nanotubes</br>
+			<span id="aiOri" class="items heat hollow" data-base-value="4500000">4.5M</span> Oricalcum (NOTE: This can only be gotten after Navigation Data)</br>
+			<span id="aiQuantium" class="items heat hollow" data-base-value="8550000">8.55M</span> Quantium</br>
+			<span id="aiData" class="items heat hollow" data-base-value="67600">67.6k</span> Encrypted</br>
+			</br>
+			So there is some obvious push and pull of saving up Quantium for this vs pushing into Navigation Data to get the Oricalcum</br>
+		</p>
+		
+		<p>
+		
+		</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	//This was copy pasted code for creating spoilers
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	
+	// Math for resources
+	
+	// Check boxes
+	/*const heatBox = document.getElementById("heatBox");
+	
+	heatBox.addEventListener('change', () => {
+		if (heatBox.checked){
+			heatBoxox.dataset.heatMultiplier = 0.9;
+		} else {
+			heatBox.dataset.heatMultiplier = 1;
+		}
+		bigUpdate();
+		
+	});*/
+	
+	//variable naming convensions cause I'm getting confused
+	//select<X> is the pointer to the element in HTML
+	//<X>Multi is the multiplier stored
+	//<X>Value is the HTML id
+	
+	//check for Heat
+	const selectHeat = document.getElementById("heatValue");
+	const selectHollow = document.getElementById("hollowValue");
+	
+	let heatMulti = selectHeat.value;
+	let hollowMulti = selectHollow.value;
+	
+	
+	selectHeat.addEventListener("change", function () {
+	  heatMulti = parseFloat(selectHeat.value); // update stored value
+	  bigUpdate();
+	  //console.log("Updated to:", heatMulti);
+	});
+	selectHollow.addEventListener("change", function () {
+	  hollowMulti = parseFloat(selectHollow.value); // update stored value
+	  bigUpdate();
+	  //console.log("Updated to:", heatMulti);
+	});
+	
+	bigUpdate(); //run once to set everything correctly?
+	//Set Variables
+	
+	
+	
+	
+	//Functions
+	
+	//Big Update function
+	
+	function bigUpdate() {
+		// Use querySelectorAll or convert HTMLCollection to array
+		const allValues = document.getElementsByClassName("items");
+
+		// getElementsByClassName returns an HTMLCollection, not an array,
+		// so we need to convert it to use forEach
+		Array.from(allValues).forEach(function(element) {
+			//console.log("bigUpdate");
+
+			// dataset access and parse
+			let newNum = parseFloat(element.dataset.baseValue); // 'data-base-value' in HTML
+			
+			// Check if element has class 'heat', not newNum
+			if (element.classList.contains("heat")) {
+				newNum = newNum * heatMulti;
+				//console.log("HeatUpdate");
+			}
+			if (element.classList.contains("hollow")) {
+				newNum = newNum * hollowMulti;
+				//console.log("HeatUpdate");
+			}
+			// Example usage:
+			//newNum=newNum.toFixed(0);
+			element.textContent = abbreviateNumber(parseInt(newNum.toFixed(0))); // Show updated value in span
+		});
+	}
+		
+	//Yoinked from: https://github.com/moh3n9595/js-abbreviation-number
+	//Sorry for molesting your code I am new
+	function abbreviateNumber
+	(
+	  num,
+	  digit = 1,
+	  //options,
+	)
+	{
+	  // Previous options style
+	  /*
+	  if (Array.isArray(options)) {
+		options = { symbols: options };
+	  }*/
+
+	  //const { symbols, padding } = Object.assign({}, defaultOptions, options);
+	  padding = true;
+	  symbols = ["", "k", "M", "G", "T", "P", "E"];
+		
+
+	  // handle negatives
+	  const sign = Math.sign(num) >= 0;
+	  num = Math.abs(num);
+
+	  // what tier? (determines SI symbol)
+	  const tier = (Math.log10(num) / 3) | 0;
+
+	  // if zero, we don't need a suffix
+	  if (tier == 0) return (!sign ? "-" : "") + num.toString();
+
+	  // get suffix and determine scale
+	  const suffix = symbols[tier];
+	  if (!suffix) throw new RangeError();
+
+	  const scale = Math.pow(10, tier * 3);
+
+	  // scale the number
+	  const scaled = num / scale;
+
+	  let rounded = scaled.toFixed(digit);
+	  if (!padding) {
+		rounded = String(Number(rounded));
+	  }
+
+	  // format number and add suffix
+	  return (!sign ? "-" : "") + rounded + suffix;
+	}
+		
+	</script>
+</body>
+
+
+</html>
